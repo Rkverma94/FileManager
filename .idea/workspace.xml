@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="862b954b-8aaf-44a3-8f26-86ae6f19d056" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/FileManager.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmd.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/copy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rm.py" afterDir="false" />
-    </list>
+    <list default="true" id="862b954b-8aaf-44a3-8f26-86ae6f19d056" name="Changes" comment="Initial Commit for CMD" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -67,6 +56,19 @@
       <option name="presentableId" value="Default" />
       <updated>1708183311032</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit for CMD">
+      <option name="closed" value="true" />
+      <created>1708429278512</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708429278512</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit for CMD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit for CMD" />
   </component>
 </project>
