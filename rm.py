@@ -9,10 +9,13 @@ class Remove(FileCommandPrompt):
     def removefile(self, file):
         self.run(file)
 
+    def removefiles(self, files):
+        self.run(files)
+
 
 def main():
-    remove = Remove('C:\\Users\\Shree\\Documents\\Pdfs\\')
-    remove.removefile('testtodel.txt')
+    ...
+
 
 if __name__ == '__main__':
     main()

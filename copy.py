@@ -10,13 +10,12 @@ class Copy(FileCommandPrompt):
         ...
 
     def copyfiles(self, files):
-        for file in files:
-            self.run(files)
+        self.run(files)
         ...
 
 
 def main():
-    copy = Copy('C:\\Users\\Shree\\Documents\\', 'C:\\Users\\Shree\\Documents\\Pdfs')
+    copy = Copy('C:\\Users\\Shree\\Documents', 'C:\\Users\\Shree\\Documents\\Pdfs')
     copy.copyfile('test.css')
 
 

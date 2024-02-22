@@ -2,6 +2,7 @@ import os
 
 
 class FileCommandPrompt:
+    folders = ['Docs', 'Videos', 'Music', 'Others', 'Applications']
     def __init__(self, command, sourcepath, targetpath=None):
         self.command = command
         self.sourcepath = sourcepath
@@ -55,7 +56,10 @@ class FileCommandPrompt:
                 if not self.checkfile(file):
                     invalid_files.append(file)
                 else:
-                    os.system(self.command + ' ' + '\"' + self.sourcepath + file + '\"' + ' ' + '\"' + self.targetpath + '\"')
+                    command = self.command+' '+'\"'+self.sourcepath+file+'\"'
+                    if self.targetpath:
+                        command += ' '+'\"'+self.targetpath+'\"'
+                    os.system(command)
             if invalid_files.length > 0:
                 raise ValueError('Few file does not exists')
 
