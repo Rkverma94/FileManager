@@ -23,8 +23,6 @@ def main():
             supports single/multiple file deletion
             
         ''')
-        directories_in_path = [filename for filename in os.listdir('C:\\Users\\Shree\\Documents') if os.path.isdir(os.path.join('C:\\Users\\Shree\\Documents\\', filename))]
-
     ...
 
 
