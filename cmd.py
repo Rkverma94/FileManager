@@ -25,6 +25,7 @@ class FileCommandPrompt:
 
     @sourcepath.setter
     def sourcepath(self, path):
+        print(f"source path: {path}")
         if not os.path.exists(path):
             raise ValueError('Path does not exists')
         self._sourcepath = path

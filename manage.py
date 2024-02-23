@@ -12,21 +12,21 @@ class Manage(FileCommandPrompt):
         ...
 
     def initialise_folders(self):
-        directories_in_path = [filename for filename in os.listdir(self.sourcepath) if os.path.isdir(os.path.join(self.sourcepath, filename))]
+        directories_in_path = [filename for filename in os.listdir(self.sourcepath) if
+                               os.path.isdir(os.path.join(self.sourcepath, filename))]
         for folder in self.folders:
             if folder not in directories_in_path:
-                os.system('mkdir '+self.sourcepath+'\\'+folder)
-
+                os.system('mkdir ' + self.sourcepath + '\\' + folder)
 
     def arrange_files(self):
         docs = []
         imgs = []
         apps = []
         others = []
-        # get list of files only from sourcepath
+        # get list of files only from source path
         list_files = [filename for filename in os.listdir(self.sourcepath) if
                       not os.path.isdir(os.path.join(self.sourcepath, filename))]
-        # iterate on each file and put them in each containers
+        # iterate on each file and put them in each container
         for file in list_files:
             print(file)
             try:
@@ -64,9 +64,11 @@ class Manage(FileCommandPrompt):
         #
         ...
 
+
 def main():
     manage = Manage('arrange', 'C:\\Users\\Shree\\Downloads\\')
     pass
+
 
 if __name__ == '__main__':
     main()
