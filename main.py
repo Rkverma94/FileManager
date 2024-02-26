@@ -15,17 +15,34 @@ def main():
         # arguments are passed
         # check for validity of commands
         list_of_args = sys.argv[1:]
-        if list_of_args[0] == 'copy' and len(list_of_args) == 3:
-            print(f"{list_of_args[1]}")
-            filelist = list_of_args[1].split('\\')[-1]
-            print(f"fileList---{list_of_args[1].split('\\')}")
-            path = '\\'.join(list_of_args[1].split('\\')[:len(list_of_args[1].split('\\'))-1])
-            if path[-1] == '\\':
-                path += '\\'
-            print("path---",path)
-            copy = Copy(path, list_of_args[2])
-            copy.copyfile(filelist)
-
+        if list_of_args[0] == 'copy':
+            if len(list_of_args) == 3:
+                print(f"{list_of_args[1]}")
+                filelist = list_of_args[1].split('\\')[-1]
+                print(f"fileList---{list_of_args[1].split('\\')}")
+                path = '\\'.join(list_of_args[1].split('\\')[:len(list_of_args[1].split('\\'))-1])
+                if path[-1] == '\\':
+                    path += '\\'
+                print("path---",path)
+                copy = Copy(path, list_of_args[2])
+                copy.copyfile(filelist)
+            else:
+                raise ValueError('Proper arguments not passed')
+        elif list_of_args[0] == 'del':
+            if len(list_of_args) == 2:
+                filelist = list_of_args[1].split('\\')[-1]
+                path = '\\'.join(list_of_args[1].split('\\')[:len(list_of_args[1].split('\\'))-1])
+                if path[-1] == '\\':
+                    path += '\\'
+                remove = Remove(path)
+                remove.removefile(filelist)
+            else:
+                raise ValueError('Proper arguments are not passed')
+        elif list_of_args[0] == 'arrange':
+            if len(list_of_args) == 2:
+                Manage(list_of_args[1])
+            else:
+                raise ValueError('Proper arguments are not passed')
 
 
     else:
@@ -57,7 +74,7 @@ def main():
             case 'arrange':
                 sourcepath = input('what\'s? your source folder path >')
                 print(f'I am arranging your folder')
-                Manage('arrange', sourcepath)
+                Manage( sourcepath)
             case _:
                 sys.exit(f'Either {command} is invalid or it is not implemented.')
 

@@ -4,8 +4,8 @@ from cmd import FileCommandPrompt
 
 
 class Manage(FileCommandPrompt):
-    def __init__(self, command, sourcepath):
-        super().__init__(command, sourcepath)
+    def __init__(self, sourcepath):
+        super().__init__('arrange', sourcepath)
         self.initialise_folders()
         self.arrange_files()
 
@@ -66,7 +66,7 @@ class Manage(FileCommandPrompt):
 
 
 def main():
-    manage = Manage('arrange', 'C:\\Users\\Shree\\Downloads\\')
+    manage = Manage( 'C:\\Users\\Shree\\Downloads\\')
     pass
 
 
